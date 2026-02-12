@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yamete Kudasai - Ultimate Dating Sim Parody</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Age Verification Screen -->
+        <div id="age-verify" class="screen active">
+            <div class="age-gate">
+                <h1 class="anime-title">⚠️ WARNING ⚠️</h1>
+                <p class="subtitle">This game contains:</p>
+                <ul class="warning-list">
+                    <li>Excessive anime clichés</li>
+                    <li>Blatant fan service satire</li>
+                    <li>Cringe-inducing dialogue</li>
+                    <li>Second-hand embarrassment</li>
+                    <li>Absolutely no actual romance</li>
+                </ul>
+                <p class="age-question">Are you 18+ and ready for this disaster?</p>
+                <div class="age-buttons">
+                    <button class="btn btn-yes" onclick="verifyAge(true)">YES, I CAN HANDLE IT</button>
+                    <button class="btn btn-no" onclick="verifyAge(false)">NO, I HAVE DIGNITY</button>
+                </div>
+                <p class="disclaimer">(This is a parody. No actual mature content. Just bad jokes.)</p>
+            </div>
+        </div>
+
+        <!-- Main Menu Screen -->
+        <div id="main-menu" class="screen">
+            <div class="menu-container">
+                <h1 class="game-title">YAMETE KUDASAI</h1>
+                <p class="tagline">The Dating Sim That Wants You to Stop Playing</p>
+                <div class="menu-buttons">
+                    <button class="menu-btn" onclick="startGame()">▶ START GAME</button>
+                    <button class="menu-btn" onclick="showCharacters()">👥 CHARACTERS</button>
+                    <button class="menu-btn" onclick="showGallery()">🖼️ GALLERY</button>
+                    <button class="menu-btn" onclick="showSettings()">⚙️ SETTINGS</button>
+                </div>
+                <div class="mascot">
+                    <p>🐱</p>
+                    <p class="mascot-text">"Why are you playing this? Go touch grass."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Character Selection Screen -->
+        <div id="character-select" class="screen">
+            <div class="character-container">
+                <h2 class="screen-title">Choose Your... Victim</h2>
+                <div class="character-grid" id="character-grid">
+                    <!-- Characters loaded dynamically -->
+                </div>
+                <button class="btn-back" onclick="showMainMenu()">← BACK</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="game-container">
+                <div class="game-header">
+                    <span id="current-location">📍 Some Anime Location</span>
+                    <span id="player-name">Player-kun</span>
+                </div>
+                <div class="character-display">
+                    <div class="character-sprite" id="character-sprite">
+                        <div class="sprite-placeholder" id="sprite-placeholder">👤</div>
+                    </div>
+                    <div class="character-info">
+                        <h3 id="current-character-name">Character Name</h3>
+                        <p id="current-character-title">"Generic Anime Trope"</p>
+                    </div>
+                </div>
+                <div class="dialogue-box">
+                    <p id="dialogue-text">"Insert dialogue here..."</p>
+                    <div class="dialogue-options" id="dialogue-options">
+                        <!-- Options loaded dynamically -->
+                    </div>
+                </div>
+                <div class="game-stats">
+                    <span>❤️ Affection: <span id="affection-level">0</span></span>
+                    <span>😱 Cringe: <span id="cringe-level">0</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Screen -->
+        <div id="gallery" class="screen">
+            <div class="gallery-container">
+                <h2 class="screen-title">Achievement Gallery</h2>
+                <div class="achievement-grid" id="achievement-grid">
+                    <div class="achievement locked">
+                        <span class="achievement-icon">🔒</span>
+                        <p class="achievement-name">???</p>
+                    </div>
+                    <div class="achievement locked">
+                        <span class="achievement-icon">🔒</span>
+                        <p class="achievement-name">???</p>
+                    </div>
+                    <div class="achievement locked">
+                        <span class="achievement-icon">🔒</span>
+                        <p class="achievement-name">???</p>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-icon">🏆</span>
+                        <p class="achievement-name">First Contact</p>
+                        <p class="achievement-desc">Started the game</p>
+                    </div>
+                </div>
+                <button class="btn-back" onclick="showMainMenu()">← BACK</button>
+            </div>
+        </div>
+
+        <!-- Settings Screen -->
+        <div id="settings" class="screen">
+            <div class="settings-container">
+                <h2 class="screen-title">Settings</h2>
+                <div class="setting-item">
+                    <label>Music Volume</label>
+                    <input type="range" id="music-volume" min="0" max="100" value="50">
+                </div>
+                <div class="setting-item">
+                    <label>Sound Effects</label>
+                    <input type="range" id="sfx-volume" min="0" max="100" value="70">
+                </div>
+                <div class="setting-item">
+                    <label>Text Speed</label>
+                    <select id="text-speed">
+                        <option value="slow">Slow (Dramatic)</option>
+                        <option value="normal" selected>Normal</option>
+                        <option value="fast">Fast (I have a life)</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label>Auto-skip cringe</label>
+                    <input type="checkbox" id="skip-cringe">
+                </div>
+                <button class="btn-back" onclick="showMainMenu()">← BACK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
