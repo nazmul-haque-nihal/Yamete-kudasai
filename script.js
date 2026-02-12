@@ -45,7 +45,7 @@ const characters = [
                 options: [
                     { text: '"I\'ll treasure that compliment forever."', affection: 5, cringe: 8 },
                     { text: '"That was the most backhanded thing anyone\'s said to me."', affection: 0, cringe: 12 },
-                    { text: '*Cry*", affection: -10, cringe: 25 }
+                    { text: '*Cry*', affection: -10, cringe: 25 }
                 ],
                 responses: [
                     "Ugh, don't be gross! It wasn't a compliment!",
